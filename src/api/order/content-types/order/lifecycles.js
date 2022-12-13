@@ -10,7 +10,7 @@ module.exports = {
         });
 
         const customerEmailTemplate = {
-            from: 'info@vilapavlov.cz',
+            from: 'info@irispavlov.cz',
             subject: `Nová objednávka ${result.id}`,
             text: 'Vaše objednávka byla odeslána.',
             html: `<div>
@@ -136,7 +136,7 @@ module.exports = {
                                                                         <br>
                                                                     </div>
                                                                     <div>
-                                                                        vinarstviiris.cz
+                                                                        irispavlov.cz
                                                                         <br>
                                                                     </div>
                                                                     <div>
@@ -168,8 +168,8 @@ module.exports = {
                                                             <br>
                                                         </div>
                                                         <div>
-                                                            <a href="https://www.vinarstviiris.cz" style="text-decoration: underline;color: rgb(153,153,153);font-size: 12.0px;text-align: center;" target="_blank">
-                                                                vinarstviiris.cz
+                                                            <a href="https://irispavlov.cz" style="text-decoration: underline;color: rgb(153,153,153);font-size: 12.0px;text-align: center;" target="_blank">
+                                                                www.irispavlov.cz
                                                             </a>
                                                             <br>
                                                         </div>
@@ -199,7 +199,7 @@ module.exports = {
 
 
           const orderingEmailTemplate = {
-            from: 'info@vilapavlov.cz',
+            from: 'info@irispavlov.cz',
             subject: `Nová objednávka ${result.id}`,
             text: 'Nová objednávka přijata.',
             html: `<div>
@@ -349,8 +349,8 @@ module.exports = {
                                                             <br>
                                                         </div>
                                                         <div>
-                                                            <a href="https://www.vinarstviiris.cz" style="text-decoration: underline;color: rgb(153,153,153);font-size: 12.0px;text-align: center;" target="_blank">
-                                                                vinarstviiris.cz
+                                                            <a href="https://irispavlov.cz" style="text-decoration: underline;color: rgb(153,153,153);font-size: 12.0px;text-align: center;" target="_blank">
+                                                                www.irispavlov.cz
                                                             </a>
                                                             <br>
                                                         </div>
@@ -390,7 +390,7 @@ module.exports = {
 
         try {
             await strapi.plugins.email.services.email.sendTemplatedEmail({
-                to: `info@vilapavlov.cz`,
+                to: `info@irispavlov.cz`,
             },
             orderingEmailTemplate,
             );

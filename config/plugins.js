@@ -25,8 +25,8 @@ module.exports = ({ env }) => ({
           apiKey: env("SENDGRID_API_KEY"),
         },
         settings: {
-          defaultFrom: "info@vilapavlov.cz",
-          defaultReplyTo: "info@vilapavlov.cz",
+          defaultFrom: "info@irispavlov.cz",
+          defaultReplyTo: "info@irispavlov.cz",
         },
       },
     },
