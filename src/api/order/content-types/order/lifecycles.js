@@ -379,21 +379,23 @@ module.exports = {
           };
 
         try {
-            await strapi.plugins.email.services.email.sendTemplatedEmail({
+            await strapi.plugins['email'].services.email.send({
                 to: `${result.email}`,
-            },
-            customerEmailTemplate,
-            );
+                subject: `${customerEmailTemplate.subject}`,
+                text: `${customerEmailTemplate.text}`,
+                html: `${customerEmailTemplate.html}`,
+            });
         } catch(err) {
             console.log(err);
         }
 
         try {
-            await strapi.plugins.email.services.email.sendTemplatedEmail({
+            await strapi.plugins['email'].services.email.send({
                 to: `info@irispavlov.cz`,
-            },
-            orderingEmailTemplate,
-            );
+                subject: `${customerEmailTemplate.subject}`,
+                text: `${customerEmailTemplate.text}`,
+                html: `${customerEmailTemplate.html}`,
+            });
         } catch(err) {
             console.log(err);
         }

@@ -2090,7 +2090,7 @@
     "request" "^2.83.0"
     "url-join" "4.0.1"
 
-"@strapi/provider-email-sendgrid@4.5.3":
+"@strapi/provider-email-sendgrid@^4.5.3":
   "integrity" "sha512-3maQdFqG0KUWfe6u4TkCFhcTjK1WrCBD0QdK2pD+ia9vS+g0jqgnGaEdQIyklja0ORYSx/x5JXWB0avbnYuNmA=="
   "resolved" "https://registry.npmjs.org/@strapi/provider-email-sendgrid/-/provider-email-sendgrid-4.5.3.tgz"
   "version" "4.5.3"
