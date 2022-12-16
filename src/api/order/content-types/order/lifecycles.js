@@ -392,9 +392,9 @@ module.exports = {
         try {
             await strapi.plugins['email'].services.email.send({
                 to: `info@irispavlov.cz`,
-                subject: `${customerEmailTemplate.subject}`,
-                text: `${customerEmailTemplate.text}`,
-                html: `${customerEmailTemplate.html}`,
+                subject: `${orderingEmailTemplate.subject}`,
+                text: `${orderingEmailTemplate.text}`,
+                html: `${orderingEmailTemplate.html}`,
             });
         } catch(err) {
             console.log(err);
