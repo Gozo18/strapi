@@ -71,6 +71,15 @@
     "color": {
       "type": "string",
       "required": true
+    },
+    "price6Pack": {
+      "type": "integer"
+    },
+    "price18Pack": {
+      "type": "integer"
+    },
+    "price30Pack": {
+      "type": "integer"
     }
   }
 }
