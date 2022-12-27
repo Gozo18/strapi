@@ -140,7 +140,7 @@ module.exports = {
                                                                         <br>
                                                                     </div>
                                                                     <div>
-                                                                        +420 123 456 789
+                                                                        +420 602 528 545
                                                                         <br>
                                                                     </div>
                                                                     <p>
@@ -321,7 +321,7 @@ module.exports = {
                                                                         <br>
                                                                     </div>
                                                                     <div>
-                                                                        +420 123 456 789
+                                                                        +420 602 528 545
                                                                         <br>
                                                                     </div>
                                                                     <p>
