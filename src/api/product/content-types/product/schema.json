@@ -80,6 +80,10 @@
     },
     "price30Pack": {
       "type": "integer"
+    },
+    "Promo": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
