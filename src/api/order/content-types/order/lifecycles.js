@@ -397,7 +397,7 @@ module.exports = {
 
     try {
       await strapi.plugins["email"].services.email.send({
-        to: `info@irispavlov.cz`,
+        to: `info@vinoiris.cz`,
         subject: `${orderingEmailTemplate.subject}`,
         text: `${orderingEmailTemplate.text}`,
         html: `${orderingEmailTemplate.html}`,
