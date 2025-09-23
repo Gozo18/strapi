@@ -1,19 +1,26 @@
 module.exports = {
-    async afterCreate(event) {
-        const { result } = event;
+  async afterCreate(event) {
+    const { result } = event;
 
-        let emailProducts = '';
-        
-        result.Orderedproduct.map((pro) => {
-            const line = "<tr><td>" + pro.productname + "</td><td>" + pro.productquantity + "</td><td>" + pro.productprice + ",- Kč</td></tr>";
-            emailProducts += line; 
-        });
+    let emailProducts = "";
 
-        const customerEmailTemplate = {
-            from: 'info@irispavlov.cz',
-            subject: `Nová objednávka ${result.id}`,
-            text: 'Vaše objednávka byla odeslána.',
-            html: `<div>
+    result.Orderedproduct.map((pro) => {
+      const line =
+        "<tr><td>" +
+        pro.productname +
+        "</td><td>" +
+        pro.productquantity +
+        "</td><td>" +
+        pro.productprice +
+        ",- Kč</td></tr>";
+      emailProducts += line;
+    });
+
+    const customerEmailTemplate = {
+      from: "info@vinoiris.cz",
+      subject: `Nová objednávka Víno Iris číslo ${result.id}`,
+      text: "Vaše objednávka byla odeslána.",
+      html: `<div>
             <div>
                 <table border="0" cellpadding="0" cellspacing="0" class="x_1255290727body" style="border-collapse: separate;background-color: rgb(246,246,246);width: 100.0%;" width="100%" bgcolor="#f6f6f6">
                     <tbody>
@@ -36,7 +43,7 @@ module.exports = {
                                                                         <b>
                                                                             <span class="font" style="font-family:sans-serif">
                                                                                 <span class="size" style="font-size: 22px; margin: 20px 0px; text-align: center;">
-                                                                                    Vinařství Iris - objednávka odeslána!
+                                                                                    Víno Iris - objednávka odeslána!
                                                                                 </span>
                                                                             </span>
                                                                         </b>
@@ -132,11 +139,11 @@ module.exports = {
                                                                         <br>
                                                                     </div>
                                                                     <div>
-                                                                        vinařství Iris
+                                                                        Víno Iris
                                                                         <br>
                                                                     </div>
                                                                     <div>
-                                                                        irispavlov.cz
+                                                                        vinoiris.cz
                                                                         <br>
                                                                     </div>
                                                                     <div>
@@ -162,14 +169,14 @@ module.exports = {
                                                         <div>
                                                             <span class="colour" style="color:rgb(153, 153, 153)">
                                                                 <span class="size" style="font-size: 12px; text-align: center;">
-                                                                    vinařství Iris, Podhradní 180, Pavlov 692 01
+                                                                    Víno Iris, Podhradní 180, Pavlov 692 01
                                                                 </span>
                                                             </span>
                                                             <br>
                                                         </div>
                                                         <div>
-                                                            <a href="https://irispavlov.cz" style="text-decoration: underline;color: rgb(153,153,153);font-size: 12.0px;text-align: center;" target="_blank">
-                                                                www.irispavlov.cz
+                                                            <a href="https://vinoiris.cz" style="text-decoration: underline;color: rgb(153,153,153);font-size: 12.0px;text-align: center;" target="_blank">
+                                                                www.vinoiris.cz
                                                             </a>
                                                             <br>
                                                         </div>
@@ -195,14 +202,13 @@ module.exports = {
                 <br>
             </div>
         </div>`,
-          };
+    };
 
-
-          const orderingEmailTemplate = {
-            from: 'info@irispavlov.cz',
-            subject: `Nová objednávka ${result.id}`,
-            text: 'Nová objednávka přijata.',
-            html: `<div>
+    const orderingEmailTemplate = {
+      from: "info@vinoiris.cz",
+      subject: `Nová objednávka Víno Iris číslo ${result.id}`,
+      text: "Nová objednávka přijata.",
+      html: `<div>
             <div>
                 <table border="0" cellpadding="0" cellspacing="0" class="x_1255290727body" style="border-collapse: separate;background-color: rgb(246,246,246);width: 100.0%;" width="100%" bgcolor="#f6f6f6">
                     <tbody>
@@ -225,7 +231,7 @@ module.exports = {
                                                                         <b>
                                                                             <span class="font" style="font-family:sans-serif">
                                                                                 <span class="size" style="font-size: 22px; margin: 20px 0px; text-align: center;">
-                                                                                    Vinařství Iris - nová objednávka!
+                                                                                    Víno Iris - nová objednávka!
                                                                                 </span>
                                                                             </span>
                                                                         </b>
@@ -313,11 +319,11 @@ module.exports = {
                                                                         <br>
                                                                     </div>
                                                                     <div>
-                                                                        vinařství Iris
+                                                                        Víno Iris
                                                                         <br>
                                                                     </div>
                                                                     <div>
-                                                                        vinarstviiris.cz
+                                                                        vinoiris.cz
                                                                         <br>
                                                                     </div>
                                                                     <div>
@@ -343,14 +349,14 @@ module.exports = {
                                                         <div>
                                                             <span class="colour" style="color:rgb(153, 153, 153)">
                                                                 <span class="size" style="font-size: 12px; text-align: center;">
-                                                                    vinařství Iris, Podhradní 180, Pavlov 692 01
+                                                                    Víno Iris, Podhradní 180, Pavlov 692 01
                                                                 </span>
                                                             </span>
                                                             <br>
                                                         </div>
                                                         <div>
-                                                            <a href="https://irispavlov.cz" style="text-decoration: underline;color: rgb(153,153,153);font-size: 12.0px;text-align: center;" target="_blank">
-                                                                www.irispavlov.cz
+                                                            <a href="https://vinoiris.cz" style="text-decoration: underline;color: rgb(153,153,153);font-size: 12.0px;text-align: center;" target="_blank">
+                                                                www.vinoiris.cz
                                                             </a>
                                                             <br>
                                                         </div>
@@ -376,28 +382,28 @@ module.exports = {
                 <br>
             </div>
         </div>`,
-          };
+    };
 
-        try {
-            await strapi.plugins['email'].services.email.send({
-                to: `${result.email}`,
-                subject: `${customerEmailTemplate.subject}`,
-                text: `${customerEmailTemplate.text}`,
-                html: `${customerEmailTemplate.html}`,
-            });
-        } catch(err) {
-            console.log(err);
-        }
-
-        try {
-            await strapi.plugins['email'].services.email.send({
-                to: `info@irispavlov.cz`,
-                subject: `${orderingEmailTemplate.subject}`,
-                text: `${orderingEmailTemplate.text}`,
-                html: `${orderingEmailTemplate.html}`,
-            });
-        } catch(err) {
-            console.log(err);
-        }
+    try {
+      await strapi.plugins["email"].services.email.send({
+        to: `${result.email}`,
+        subject: `${customerEmailTemplate.subject}`,
+        text: `${customerEmailTemplate.text}`,
+        html: `${customerEmailTemplate.html}`,
+      });
+    } catch (err) {
+      console.log(err);
     }
-}
+
+    try {
+      await strapi.plugins["email"].services.email.send({
+        to: `info@irispavlov.cz`,
+        subject: `${orderingEmailTemplate.subject}`,
+        text: `${orderingEmailTemplate.text}`,
+        html: `${orderingEmailTemplate.html}`,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+};
