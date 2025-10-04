@@ -3,6 +3,7 @@ module.exports = {
     const { result } = event;
 
     let emailProducts = "";
+    let totalQuantities = 0;
 
     result.Orderedproduct.map((pro) => {
       const line =
@@ -14,6 +15,8 @@ module.exports = {
         pro.productprice +
         ",- Kč</td></tr>";
       emailProducts += line;
+
+      totalQuantities += pro.productquantity;
     });
 
     const customerEmailTemplate = {
@@ -79,27 +82,41 @@ module.exports = {
                                                                                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate;width: 100.0%;" width="100%">
                                                                                     <tr>
                                                                                         <td>Jméno:</td>
-                                                                                        <td>${result.Firstname} ${result.Surname}</td>
+                                                                                        <td>${
+                                                                                          result.Firstname
+                                                                                        } ${
+        result.Surname
+      }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>E-mail:</td>
-                                                                                        <td>${result.email}</td>
+                                                                                        <td>${
+                                                                                          result.email
+                                                                                        }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>Telefon:</td>
-                                                                                        <td>${result.Phone}</td>
+                                                                                        <td>${
+                                                                                          result.Phone
+                                                                                        }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>Ulice:</td>
-                                                                                        <td>${result.Street}</td>
+                                                                                        <td>${
+                                                                                          result.Street
+                                                                                        }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>Město:</td>
-                                                                                        <td>${result.Town}</td>
+                                                                                        <td>${
+                                                                                          result.Town
+                                                                                        }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>PSČ:</td>
-                                                                                        <td>${result.Psc}</td>
+                                                                                        <td>${
+                                                                                          result.Psc
+                                                                                        }</td>
                                                                                     </tr>
                                                                                 </table>
                                                                             </span>
@@ -117,7 +134,21 @@ module.exports = {
                                                                                         <td><b>Cena</b></td>
                                                                                     </tr>
                                                                                     ${emailProducts}
-                                                                                    <tr><td><b>Celková cena:</b></td><td></td><td><b>${result.Totalprice},- Kč</b>
+                                                                                    <tr><td><b>Celková sleva:</b></td><td></td><td><b>${
+                                                                                      Math.floor(
+                                                                                        totalQuantities /
+                                                                                          6
+                                                                                      ) *
+                                                                                        100 +
+                                                                                      Math.floor(
+                                                                                        totalQuantities /
+                                                                                          30
+                                                                                      ) *
+                                                                                        200
+                                                                                    },- Kč</b>
+                                                                                    <tr><td><b>Celková cena:</b></td><td></td><td><b>${
+                                                                                      result.Totalprice
+                                                                                    },- Kč</b>
                                                                                 </table>
                                                                             </span>
                                                                         </span>
@@ -267,27 +298,41 @@ module.exports = {
                                                                                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate;width: 100.0%;" width="100%">
                                                                                     <tr>
                                                                                         <td>Jméno:</td>
-                                                                                        <td>${result.Firstname} ${result.Surname}</td>
+                                                                                        <td>${
+                                                                                          result.Firstname
+                                                                                        } ${
+        result.Surname
+      }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>E-mail:</td>
-                                                                                        <td>${result.email}</td>
+                                                                                        <td>${
+                                                                                          result.email
+                                                                                        }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>Telefon:</td>
-                                                                                        <td>${result.Phone}</td>
+                                                                                        <td>${
+                                                                                          result.Phone
+                                                                                        }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>Ulice:</td>
-                                                                                        <td>${result.Street}</td>
+                                                                                        <td>${
+                                                                                          result.Street
+                                                                                        }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>Město:</td>
-                                                                                        <td>${result.Town}</td>
+                                                                                        <td>${
+                                                                                          result.Town
+                                                                                        }</td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td>PSČ:</td>
-                                                                                        <td>${result.Psc}</td>
+                                                                                        <td>${
+                                                                                          result.Psc
+                                                                                        }</td>
                                                                                     </tr>
                                                                                 </table>
                                                                             </span>
@@ -305,7 +350,21 @@ module.exports = {
                                                                                         <td><b>Cena</b></td>
                                                                                     </tr>
                                                                                     ${emailProducts}
-                                                                                    <tr><td><b>Celková cena:</b></td><td></td><td><b>${result.Totalprice},- Kč</b>
+                                                                                    <tr><td><b>Celková sleva:</b></td><td></td><td><b>${
+                                                                                      Math.floor(
+                                                                                        totalQuantities /
+                                                                                          6
+                                                                                      ) *
+                                                                                        100 +
+                                                                                      Math.floor(
+                                                                                        totalQuantities /
+                                                                                          30
+                                                                                      ) *
+                                                                                        200
+                                                                                    },- Kč</b>
+                                                                                    <tr><td><b>Celková cena:</b></td><td></td><td><b>${
+                                                                                      result.Totalprice
+                                                                                    },- Kč</b>
                                                                                 </table>
                                                                             </span>
                                                                         </span>
