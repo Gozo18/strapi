@@ -334,6 +334,12 @@ module.exports = {
                                                                                           result.Psc
                                                                                         }</td>
                                                                                     </tr>
+                                                                                    <tr>
+                                                                                        <td>Vzkaz:</td>
+                                                                                        <td>${
+                                                                                          result.Message
+                                                                                        }</td>
+                                                                                    </tr>
                                                                                 </table>
                                                                             </span>
                                                                         </span>
